@@ -1,12 +1,13 @@
-student = {'Max': [5,4,3,2,4], 'Katja': [3,4,2,4,5], 'Petr': [3,4,5,5,4]}
-name = (input('Введите имя: '))
-line_length = student.get(name).__len__()
-average_score = sum((student.get(name)[0::1])) / line_length
-name2 = (input('Введите имя: '))
-line_length = student.get(name2).__len__()
-average_score2 = sum((student.get(name2)[0::1])) / line_length
-name3 = (input('Введите имя: '))
-line_length = student.get(name3).__len__()
-average_score3 = sum((student.get(name3)[0::1])) / line_length
-print(f'Средний бал студентов: ', name + ':', average_score, name2 + ':', average_score2,
-      name3 + ':', average_score3)
+grades = [[5,3,3,5,4], [2,2,2,3], [4,5,5,2], [4,4,3], [5,5,5,4,5]]
+students = {'Johnny', 'Bilbo', 'Stele', 'Khendrik', 'Aaron'}
+average_rating = {}
+list_stud = sorted(list(students)) # сортируем студентов в алфавитном порядке
+ave_rate0 = sum(grades[0]) / grades[0].__len__() # средний бал студента
+ave_rate1 = sum(grades[1]) / grades[1].__len__() # средний бал студента
+ave_rate2 = sum(grades[2]) / grades[2].__len__() # средний бал студента
+ave_rate3 = sum(grades[3]) / grades[3].__len__() # средний бал студента
+ave_rate4 = sum(grades[4]) / grades[4].__len__() # средний бал студента
+average_rating.update({list_stud[0]: ave_rate0, list_stud[1]: ave_rate1,
+                       list_stud[2]: ave_rate2, list_stud[3]: ave_rate3,
+                       list_stud[4]: ave_rate4}) #составление словаря
+print(average_rating)
